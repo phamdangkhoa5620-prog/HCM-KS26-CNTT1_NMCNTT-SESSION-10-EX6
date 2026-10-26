@@ -1,0 +1,48 @@
+Phần 1. Phân tích bảng Excel
+Bảng Excel xấu:
+- Gộp ô (Merge Cell), có dòng trống xen giữa dữ liệu.
+- Một cột chứa nhiều loại thông tin.
+- Tiêu đề không rõ ràng, dữ liệu không thống nhất.
+- Mã bất động sản bị trùng hoặc thiếu.
+- Không thể lọc và sắp xếp dữ liệu chính xác.
+Bảng Excel đúng:
+- Mỗi cột là một Field, mỗi dòng là một Record.
+- Không gộp ô, không để dòng trống trong vùng dữ liệu.
+- Mỗi bất động sản có mã riêng.
+- Dữ liệu cùng loại được đặt trong cùng một cột.
+- Sử dụng AutoFilter và công thức để quản lý dữ liệu.
+Phần 2. Triển khai dự án Smart-Home
+File Word — SRS
+Các nội dung chính:
+- Heading 1: Giới thiệu, tổng quan hệ thống, yêu cầu chức năng, yêu cầu phi chức năng, dữ liệu và kiểm thử.
+- Heading 2: Tài khoản, quản lý tin đăng, phiên đấu giá, hoa hồng môi giới.
+- Heading 3: Đăng nhập, xác minh tin, đặt giá, kết thúc phiên và báo cáo.
+- Sử dụng Navigation Pane và mục lục tự động (Auto TOC).
+File Excel — Quản lý nhà đất
+Các trường dữ liệu:
+- Mã bất động sản, tiêu đề, khu vực, loại hình, diện tích.
+- Giá niêm yết, giá thuê, mức giảm giá.
+- Giá thuê sau giảm, tỷ lệ hoa hồng, hoa hồng dự kiến, trạng thái.
+Công thức tính giá thuê sau giảm:
+=G2*(1-H2)
+Công thức tra cứu tỷ lệ hoa hồng:
+=VLOOKUP(D2,Danh_muc!$A$2:$B$5,2,FALSE)
+Công thức tính hoa hồng:
+=F2*J2
+File PowerPoint — Pitch Deck
+Bộ trình chiếu gồm tối đa 8 slide:
+1. Giới thiệu Smart-Home.
+2. Vấn đề của thị trường.
+3. Giải pháp.
+4. Sản phẩm cốt lõi.
+5. Chiến lược thị trường.
+6. Mô hình doanh thu.
+7. Lộ trình phát triển 12 tháng.
+8. Kêu gọi vốn và hợp tác.
+Thiết kế đề xuất: nền xanh Navy, chữ trắng, điểm nhấn màu cam; mỗi slide tập trung một thông điệp và có khoảng trắng để nội dung nổi bật.
+Phần 3. Kiểm thử công thức VLOOKUP
+Khi kéo công thức xuống, vùng tra cứu có thể bị dịch chuyển nếu không cố định.
+- Công thức chưa khóa vùng:
+=VLOOKUP(D2,Danh_muc!A2:B5,2,FALSE)
+- Công thức đã khóa vùng:
+=VLOOKUP(D2,Danh_muc!$A$2:$B$5,2,FALSE)
